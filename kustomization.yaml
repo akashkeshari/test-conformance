@@ -1,0 +1,11 @@
+configMapGenerator:
+- name: azure-arc-agent-cleanup
+  files:
+  - azure-arc-agent-cleanup.properties
+  literals:
+  - azure-arc-agent-cleanup.giturl=https://raw.githubusercontent.com/Azure/azure-arc-validation/main/testsuite/arc-k8s-platform/cleanup.yaml
+  namespace: azure-arc-kubernetes-conformance
+generatorOptions:
+  disableNameSuffixHash: true
+resources:
+  - launch.yaml
